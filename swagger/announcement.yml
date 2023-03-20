@@ -1,0 +1,21 @@
+parameters:
+  - name: id
+    in: body
+    type: int
+    required: true
+  - name: title
+    in: body
+    type: string
+    required: true
+definitions:
+  Announcement:
+    type: object
+    properties:
+      message:
+        type: string
+responses:
+  200:
+    schema:
+      $ref: '#/definitions/Announcement'
+    examples:
+      rgb: {'message': 'ok'}

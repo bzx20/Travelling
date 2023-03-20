@@ -1,0 +1,25 @@
+parameters:
+  - name: id
+    in: body
+    type: int
+    required: true
+
+definitions:
+  CreateActivity:
+    type: object
+    properties:
+      message:
+        type: string
+      activity:
+        type: object
+responses:
+  200:
+    schema:
+      $ref: '#/definitions/CreateActivity'
+    examples:
+      msg: {'message': 'OK','activity': activity}
+  404:
+    schema:
+      $ref: '#/definitions/CreateActivity'
+    examples:
+      rgb: {'message': 'Failed!'}

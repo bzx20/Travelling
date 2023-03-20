@@ -1,0 +1,23 @@
+parameters:
+  - name: id
+    in: body
+    type: int
+    required: true
+
+definitions:
+  DeleteActivity:
+    type: object
+    properties:
+      message:
+        type: string
+responses:
+  200:
+    schema:
+      $ref: '#/definitions/DeleteActivity'
+    examples:
+      msg: {'message': 'OK'}
+  404:
+    schema:
+      $ref: '#/definitions/DeleteActivity'
+    examples:
+      rgb: {'message': 'Not Found!'}

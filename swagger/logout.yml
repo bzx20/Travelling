@@ -1,0 +1,17 @@
+parameters:
+  - name: id
+    in: body
+    type: string
+    required: true
+definitions:
+  OkLogout:
+    type: object
+    properties:
+      message:
+        type: string
+responses:
+  200:
+    schema:
+      $ref: '#/definitions/OkLogout'
+    examples:
+      msg: {'message': 'OK'}

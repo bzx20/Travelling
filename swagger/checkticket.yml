@@ -1,0 +1,27 @@
+parameters:
+  - name: key
+    in: body
+    type: string
+    required: true
+definitions:
+  CheckTicket:
+    type: object
+    properties:
+      message:
+        type: string
+responses:
+  200:
+    schema:
+      $ref: '#/definitions/CheckTicket'
+    examples:
+      msg: {'message': 'OK'}
+  501:
+    schema:
+      $ref: '#/definitions/CheckTicket'
+    examples:
+      msg: {'message': 'Used or Expired.'}
+  404:
+    schema:
+      $ref: '#/definitions/CheckTicket'
+    examples:
+      rgb: {'message': 'Not Found!'}

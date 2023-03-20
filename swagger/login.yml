@@ -1,0 +1,21 @@
+parameters:
+  - name: adminname
+    in: body
+    type: string
+    required: true
+  - name: password
+    in: body
+    type: string
+    required: true
+definitions:
+  OkLogin:
+    type: object
+    properties:
+      message:
+        type: string
+responses:
+  200:
+    schema:
+      $ref: '#/definitions/OkLogin'
+    examples:
+      msg: {'message': 'OK'}
